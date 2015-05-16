@@ -1,0 +1,9 @@
+<ion-view view-title="Incident Reports">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="report in reports" href="#/app/reports/{{report.id}}">
+        {{report.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
