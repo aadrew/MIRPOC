@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ngLodash'])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
   // Form data for the login modal
@@ -33,16 +33,19 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('ReportsCtrl', function($scope) {
-  $scope.reports = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
+.constant('reports', [
+  { title: 'Reggae', id: 1 },
+  { title: 'Chill', id: 2 },
+  { title: 'Dubstep', id: 3 },
+  { title: 'Indie', id: 4 },
+  { title: 'Rap', id: 5 },
+  { title: 'Cowbell', id: 6 }
+])
+
+.controller('ReportsCtrl', function($scope, reports) {
+  $scope.reports = reports;
 })
 
-.controller('ReportCtrl', function($scope, $stateParams) {
+.controller('ReportCtrl', function($scope, $stateParams, reports, lodash) {
+  $scope.report = lodash.findWhere(reports, { id: lodash.parseInt($stateParams.reportId)})
 });

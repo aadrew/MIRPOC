@@ -2,6 +2,7 @@
   "name": "mir",
   "private": "true",
   "devDependencies": {
-    "ionic": "driftyco/ionic-bower#1.0.0"
+    "ionic": "driftyco/ionic-bower#1.0.0",
+    "ng-lodash": "~0.2.3"
   }
 }
