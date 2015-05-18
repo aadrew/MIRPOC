@@ -34,12 +34,12 @@ angular.module('starter.controllers', ['ngLodash'])
 })
 
 .constant('reports', [
-  { title: 'Reggae', id: 1 },
-  { title: 'Chill', id: 2 },
-  { title: 'Dubstep', id: 3 },
-  { title: 'Indie', id: 4 },
-  { title: 'Rap', id: 5 },
-  { title: 'Cowbell', id: 6 }
+  { title: 'Employee injured', id: 1 },
+  { title: 'Damaged wheelchair', id: 2 },
+  { title: 'Fluids spilled', id: 3 },
+  { title: 'Fumes reported', id: 4 },
+  { title: 'Passenger slipped', id: 5 },
+  { title: 'Extended delay', id: 6 }
 ])
 
 .controller('ReportsCtrl', function($scope, reports) {
@@ -48,10 +48,6 @@ angular.module('starter.controllers', ['ngLodash'])
 
 .controller('ReportDetailCtrl', function($scope, $stateParams, reports, lodash) {
   $scope.report = lodash.findWhere(reports, { id: lodash.parseInt($stateParams.reportId)})
-})
-
-.controller('ReportDetailCtrl', function($scope, $stateParams) {
-  $scope.reportId = $stateParams.reportId;
 })
 
 .controller('ReportDetailCategoriesCtrl', function($scope) {
