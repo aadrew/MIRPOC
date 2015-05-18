@@ -48,4 +48,12 @@ angular.module('starter.controllers', ['ngLodash'])
 
 .controller('ReportCtrl', function($scope, $stateParams, reports, lodash) {
   $scope.report = lodash.findWhere(reports, { id: lodash.parseInt($stateParams.reportId)})
+})
+
+.controller('ReportDetailCtrl', function($scope, $stateParams) {
+  $scope.reportId = $stateParams.reportId;
+  //$scope.reportId = reportId;
+})
+
+.controller('ReportDetailCategoriesCtrl', function($scope) {
 });

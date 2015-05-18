@@ -1,0 +1,19 @@
+<ion-view view-title="Report Detail">
+  <ion-content>
+    <ion-list>
+      <ion-item href="#/app/reports/{{ reportId }}/categories">
+        Categories
+      </ion-item>
+      <ion-item href="#/app/reports/{{ reportId }}/flights">
+        Flight
+      </ion-item>
+    </ion-list>
+    <ion-nav-view name="reportContent"></ion-nav-view>
+  </ion-content>
+  <ion-footer-bar align-title="left" class="bar-stable">
+    <h1 class="title"></h1>
+    <div class="buttons" ng-click="doSomething()">
+      <button class="button button-positive">Continue</button>
+    </div>
+  </ion-footer-bar>
+</ion-view>
