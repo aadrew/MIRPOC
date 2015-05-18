@@ -1,23 +1,11 @@
 <ion-view view-title="Category Selection">
   <ion-content>
     <ul class="list">
-      <li class="item item-checkbox">
+      <li class="item item-checkbox" ng-repeat="category in categories">
         <label class="checkbox">
           <input type="checkbox" >
         </label>
-        Employee Injury on Duty
-      </li>
-      <li class="item item-checkbox">
-        <label class="checkbox">
-          <input type="checkbox">
-        </label>
-        Customer Injury / Illness
-      </li>
-      <li class="item item-checkbox">
-        <label class="checkbox">
-          <input type="checkbox">
-        </label>
-        Damaged Parts / Components
+        {{category.name}}
       </li>
     </ul>
   </ion-content>

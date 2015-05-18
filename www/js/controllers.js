@@ -41,5 +41,10 @@ angular.module('starter.controllers', ['starter.constants', 'ngLodash'])
   $scope.report = lodash.findWhere(reports, { id: lodash.parseInt($stateParams.reportId)})
 })
 
-.controller('ReportDetailCategoriesCtrl', function($scope) {
+.controller('ReportDetailCategoriesCtrl', function($scope, categories) {
+  $scope.categories = categories;
+})
+
+.controller('ReportDetailFlightCtrl', function($scope) {
+  
 });

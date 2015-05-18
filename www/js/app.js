@@ -88,6 +88,23 @@ angular.module( 'starter', [ 'ionic', 'starter.controllers', 'starter.constants'
         controller: 'ReportDetailCategoriesCtrl'
       }
     }
+  } )
+  .state( 'app.report.flight', {
+    url: "/flight",
+    views: {
+      'reportContent': {
+        templateUrl: "templates/reports.detail.flight.html",
+        controller: 'ReportDetailFlightCtrl'
+      }
+    }
+  } )
+  .state( 'app.report.temp', {
+    url: "/temp",
+    views: {
+      'reportContent': {
+        templateUrl: "templates/temp.html"
+      }
+    }
   } );
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise( '/app/reports' );
