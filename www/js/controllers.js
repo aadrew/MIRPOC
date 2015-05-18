@@ -34,12 +34,12 @@ angular.module('starter.controllers', ['ngLodash'])
 })
 
 .constant('reports', [
-  { title: 'Employee injured', id: 1 },
-  { title: 'Damaged wheelchair', id: 2 },
-  { title: 'Fluids spilled', id: 3 },
-  { title: 'Fumes reported', id: 4 },
-  { title: 'Passenger slipped', id: 5 },
-  { title: 'Extended delay', id: 6 }
+  { title: 'Employee injured', id: 1, categories: [1, 3, 8] },
+  { title: 'Damaged wheelchair', id: 2, categories: [8] },
+  { title: 'Fluids spilled', id: 3, categories: [7] },
+  { title: 'Fumes reported', id: 4, categories: [5] },
+  { title: 'Passenger slipped', id: 5, categories: [2, 7] },
+  { title: 'Extended delay', id: 6, categories: [4] }
 ])
 
 .controller('ReportsCtrl', function($scope, reports) {
