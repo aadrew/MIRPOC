@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['ngLodash'])
+angular.module('starter.controllers', ['starter.constants', 'ngLodash'])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
   // Form data for the login modal
@@ -32,15 +32,6 @@ angular.module('starter.controllers', ['ngLodash'])
     }, 1000);
   };
 })
-
-.constant('reports', [
-  { title: 'Employee injured', id: 1, categories: [1, 3, 8] },
-  { title: 'Damaged wheelchair', id: 2, categories: [8] },
-  { title: 'Fluids spilled', id: 3, categories: [7] },
-  { title: 'Fumes reported', id: 4, categories: [5] },
-  { title: 'Passenger slipped', id: 5, categories: [2, 7] },
-  { title: 'Extended delay', id: 6, categories: [4] }
-])
 
 .controller('ReportsCtrl', function($scope, reports) {
   $scope.reports = reports;
