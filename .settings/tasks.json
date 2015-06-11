@@ -1,9 +1,21 @@
 {
     "version": "0.1.0",
-    "command": "gulp",
+    "command": ".tasksWin.bat",
     "isShellCommand": true,
     "args": [
-        "--no-color"
     ],
-    "tasks": []
+    "tasks": [
+        {
+            "taskName": "ionic serve -l",
+            "isBuildCommand": false,
+            "isTestCommand": true,
+            "problemMatcher": "$lessCompile"
+        },
+        {
+            "taskName": "ionic build android",
+            "isBuildCommand": true,
+            "isTestCommand": false,
+            "problemMatcher": "$lessCompile"
+        }
+    ]
 }
