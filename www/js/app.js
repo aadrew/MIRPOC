@@ -71,37 +71,47 @@ angular.module( 'starter', [ 'ionic', 'starter.controllers', 'starter.constants'
     } )
 
   .state( 'app.report', {
-    url: "/reports/:reportId",
+    url: "/report/:reportId",
     views: {
       'menuContent': {
-        templateUrl: "templates/reports.detail.html",
+        templateUrl: "templates/report.detail.html",
         controller: 'ReportDetailCtrl'
       }
     }
   } )
 
-  .state( 'app.report.categories', {
+  .state( 'app.newreport', {
+    url: "/newreport",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/report.new.html",
+        controller: 'ReportsCtrl'
+      }
+    }
+  } )
+
+  .state( 'app.newreport.categories', {
     url: "/categories",
     views: {
-      'reportContent': {
-        templateUrl: "templates/reports.detail.categories.html",
+      'newreportContent': {
+        templateUrl: "templates/report.new.detail.categories.html",
         controller: 'ReportDetailCategoriesCtrl'
       }
     }
   } )
-  .state( 'app.report.flight', {
+  .state( 'app.newreport.flight', {
     url: "/flight",
     views: {
-      'reportContent': {
-        templateUrl: "templates/reports.detail.flight.html",
+      'newreportContent': {
+        templateUrl: "templates/report.new.detail.flight.html",
         controller: 'ReportDetailFlightCtrl'
       }
     }
   } )
-  .state( 'app.report.temp', {
+  .state( 'app.newreport.temp', {
     url: "/temp",
     views: {
-      'reportContent': {
+      'newreportContent': {
         templateUrl: "templates/temp.html"
       }
     }

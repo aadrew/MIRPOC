@@ -1,12 +1,12 @@
 angular.module('starter.constants', [])
 
 .constant('reports', [
-  { title: 'Employee injured', id: 1, categories: [1, 3, 8] },
-  { title: 'Damaged wheelchair', id: 2, categories: [8] },
-  { title: 'Fluids spilled', id: 3, categories: [7] },
-  { title: 'Fumes reported', id: 4, categories: [5] },
-  { title: 'Passenger slipped', id: 5, categories: [2, 7] },
-  { title: 'Extended delay', id: 6, categories: [4] }
+  { title: 'Employee injured',    date: '05/24/2015', id: 1, categories: [1, 3, 8] },
+  { title: 'Damaged wheelchair',  date: '05/24/2015', id: 2, categories: [8] },
+  { title: 'Fluids spilled',      date: '05/24/2015', id: 3, categories: [7] },
+  { title: 'Fumes reported',      date: '05/24/2015', id: 4, categories: [5] },
+  { title: 'Passenger slipped',   date: '05/24/2015', id: 5, categories: [2, 7] },
+  { title: 'Extended delay',      date: '05/24/2015', id: 6, categories: [4] }
 ])
 
 .constant('categories', [
